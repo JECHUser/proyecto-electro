@@ -14,7 +14,8 @@ theta = linspace(0, 2*pi,60);
 Vin = ((b*k)/e_0).*(1-(a./r))+(2*k/(15*b*e_0)).*((r.^2)-((a^5)./(r.^3))).*(3.*(cos(theta-1)).^3)+V_0*a./r;
 
 [x,y,z]= pol2cart(theta,r,Vin);
-surf(x,y,Vin)
+contour(x,y,Vin)
+colorbar
 
 xlabel("x")
 ylabel("y")
@@ -31,6 +32,7 @@ Vout = (((-b*k*(b-a))./(e_0.*r)))+(((2*k*(b^5-a^5))/(15*b*e_0))).*(3.*(cos(theta
 
 [x,y,z]= pol2cart(theta,r,Vout);
 contour(x,y,Vout,100);
+colorbar
 
 xlabel("x")
 ylabel("y")
