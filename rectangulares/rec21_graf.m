@@ -6,9 +6,10 @@ figure('name', 'Potencial y Campo eléctrico', 'NumberTitle', 'off')
 tab1 = uitab('Title','Potencial Eléctrico');
 ax1 = axes(tab1);
 
+% plots
 subplot(2,2,1)
 
-[X,Y,Z,U,V,Potencial,Campo,Densidad] = rec21_serie(a,b,1);
+[X,Y,Z,U,V,Potencial,Campo,Densidad] = rec21_serie(a,b,1); % llama funcion rec21_serie.m
 surf(X,Y,Potencial);
 legend({' n = 1'},'Location','northwest','Orientation','horizontal')
 xlabel("x")
@@ -42,6 +43,8 @@ xlabel("x")
 ylabel("y")
 zlabel("V")
 
+
+% creacion de tabs (CAMPOS)
 tab2 = uitab('Title','Campo Eléctrico');
 ax2 = axes(tab2);
 
@@ -81,6 +84,8 @@ xlabel("x")
 ylabel("y")
 zlabel("z")
 
+
+% creacion de tabs (DENSIDADES)
 tab3 = uitab('Title','Densidad de Carga');
 ax3 = axes(tab3);
 
