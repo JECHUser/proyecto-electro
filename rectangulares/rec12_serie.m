@@ -1,5 +1,5 @@
 function [X,Y,Z,U,V,Potencial,Campo,Densidad] = rec12_serie(a,b,n)
-% Esta función calcula el potencial (serie).
+% Esta funciÃ³n calcula el potencial (serie).
 x = -a:0.05:a;
 y = 0:0.05:a;
 [X,Y] = meshgrid(x,y);
@@ -21,10 +21,10 @@ end
 
 Potencial = serie;
 neg_pot =(-1) * Potencial;
-Campo = gradient(neg_pot);
+Campo = gradient(neg_pot);   % obtiene campo electrico
 [U,V] =  gradient(neg_pot);
 
-Densidad = divergence(U,V);
-Densidad = e_0 * Densidad;
+Densidad = divergence(U,V);   
+Densidad = e_0 * Densidad;   % obtiene densidad de carga
 
 end
