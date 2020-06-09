@@ -1,7 +1,9 @@
+% dimensiones de la tuberia rectangular
 a = 1; b = 1;
 
-figure('name', 'Potencial y Campo eléctrico', 'NumberTitle', 'off')
-tab1 = uitab('Title','Potencial Eléctrico');
+% creacion de tabs (POTENCIALES)
+figure('name', 'Potencial y Campo elÃ©ctrico', 'NumberTitle', 'off')
+tab1 = uitab('Title','Potencial ElÃ©ctrico');
 ax1 = axes(tab1);
 
 subplot(2,2,1)
@@ -40,7 +42,7 @@ xlabel("x")
 ylabel("y")
 zlabel("V")
 
-tab2 = uitab('Title','Campo Eléctrico');
+tab2 = uitab('Title','Campo ElÃ©ctrico');
 ax2 = axes(tab2);
 
 subplot(2,2,1)
