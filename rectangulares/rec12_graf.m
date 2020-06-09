@@ -1,14 +1,20 @@
+% dimensiones de la tuberia rectangular
 a = 1; b = 1;
-figure('name', 'Potencial y Campo eléctrico', 'NumberTitle', 'off')
-tab1 = uitab('Title','Potencial Eléctrico');
+
+% creacion de tabs (POTENCIALES)
+figure('name', 'Potencial y Campo elÃ©ctrico', 'NumberTitle', 'off')
+tab1 = uitab('Title','Potencial ElÃ©ctrico');
 ax1 = axes(tab1);
 
+% subplots
 subplot(2,2,1)
 
-[X,Y,Z,U,V,Potencial,Campo,Densidad] = rec12_serie(a,b,1);
+% graficar superficie
+[X,Y,Z,U,V,Potencial,Campo,Densidad] = rec12_serie(a,b,1); % llama funcion rec12_serie.m
 surf(X,Y,Potencial);
 colorbar
 
+% ejes
 legend({' n = 1'},'Location','northwest','Orientation','horizontal')
 xlabel("x")
 ylabel("y")
@@ -47,7 +53,9 @@ xlabel("x")
 ylabel("y")
 zlabel("V")
 
-tab2 = uitab('Title','Campo Eléctrico');
+
+% creacion de tabs (CAMPOS)
+tab2 = uitab('Title','Campo ElÃ©ctrico');
 ax2 = axes(tab2);
 
 subplot(2,2,1)
@@ -86,6 +94,8 @@ xlabel("x")
 ylabel("y")
 zlabel("z")
 
+
+% creacion de tabs (DENSIDADES)
 tab3 = uitab('Title','Densidad de Carga');
 ax3 = axes(tab3);
 
